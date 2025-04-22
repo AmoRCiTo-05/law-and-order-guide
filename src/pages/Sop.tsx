@@ -1,21 +1,22 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const sopItems = [
   {
     title: "What is SOP?",
-    content: "**Definition:** Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guide police officers in their work. These procedures include various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
+    content: "Definition: Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guide police officers in their work. These procedures include various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
   },
   {
     title: "Code of Ethics vs Code of Conduct",
     content: `
-    **Code of Ethics:**
+    Code of Ethics:
     - Integrity: Officers should always act with honesty and fairness.
     - Respect for Human Rights: Treat all individuals with dignity.
     - Impartiality: Make decisions without bias.
     - Accountability: Be responsible for actions and decisions.
     - Service to the Community: Prioritize community safety.
 
-    **Code of Conduct:**
+    Code of Conduct:
     - Use of Force: Only use force when absolutely necessary.
     - Duty to Report Misconduct: Report unethical behavior.
     - Professional Appearance: Maintain neat, clean uniform.
@@ -30,23 +31,23 @@ const sopItems = [
   {
     title: "Bonafide and Non-Bonafide Evidence",
     content: `
-    **Bonafide Evidence:** Genuine, trustworthy evidence admissible in court.
+    Bonafide Evidence: Genuine, trustworthy evidence admissible in court.
     Examples: Eyewitness testimony, physical evidence like fingerprints or DNA, authenticated documents.
 
-    **Non-Bonafide Evidence:** Evidence not genuine or trustworthy.
+    Non-Bonafide Evidence: Evidence not genuine or trustworthy.
     Examples: Hearsay, illegally obtained evidence, fabricated documentation.
     `
   },
   {
     title: "Frisk vs Search",
     content: `
-    **Frisk:**
+    Frisk:
     - Brief pat-down for weapons
     - Requires reasonable suspicion
     - Limited to outer clothing
     - Safety-focused
 
-    **Search:**
+    Search:
     - Thorough examination
     - Requires warrant/probable cause
     - Can include property/belongings
@@ -102,22 +103,27 @@ const sopItems = [
   {
     title: "Bail",
     content: `
-    - Misdemeanors: Magistrate can grant
-    - Felonies: Judge approval only
-    - Requires guarantor
-    - 3x amount of registered charges
-    - Ankle monitor required
+    Bail is a financial guarantee that allows a defendant to be released from custody while awaiting trial:
+    
+    - Misdemeanors: Only a Magistrate can grant bail for minor offenses
+    - Felonies: Requires Judge approval and is rarely granted for serious crimes
+    - Financial Requirements: Typically set at 3x the amount of registered charges
+    - Guarantor: Requires a third party to vouch for defendant's court appearance
+    - Conditions: Often includes restrictions like regular check-ins, travel limitations, and ankle monitor
+    - Revocation: Bail can be revoked if conditions are violated or new crimes committed
+    - Hearing Process: Decision based on flight risk, danger to community, and criminal history
+    - Payment Options: Can be paid in cash, property, or through a bail bondsman (percentage fee)
     `
   },
   {
     title: "Detain vs Arrest",
     content: `
-    **Detain:**
+    Detain:
     - Temporary hold for questioning
     - Based on reasonable suspicion
     - Limited movement restriction
 
-    **Arrest:**
+    Arrest:
     - Taking into custody
     - Requires probable cause
     - Full custody and charges
@@ -135,12 +141,12 @@ const sopItems = [
   {
     title: "BOLO vs Warrants",
     content: `
-    **BOLO:**
+    BOLO:
     - Alert to watch for person/vehicle
     - No arrest authority
     - Information gathering
 
-    **Warrant:**
+    Warrant:
     - Legal document for action
     - Arrest/search authority
     - Court issued
@@ -171,12 +177,12 @@ const sopItems = [
   {
     title: "Reports/FIR vs Chargesheet",
     content: `
-    **Reports/FIR:**
+    Reports/FIR:
     - Initial incident documentation
     - Investigation needed
     - Complaint filing
 
-    **Chargesheet:**
+    Chargesheet:
     - Formal charges
     - Based on evidence
     - Leads to prosecution
@@ -184,7 +190,7 @@ const sopItems = [
   },
   {
     title: "Difference between Code of Conduct and Code of Ethics?",
-    content: `**Code of Ethics** (A set of principles that guide police officers in making moral and just decisions.)
+    content: `Code of Ethics (A set of principles that guide police officers in making moral and just decisions.)
 
 - Integrity: Officers should always act with honesty and fairness, even when no one is watching.
 - Respect for Human Rights: Officers must treat all individuals with dignity and respect, regardless of their background.
@@ -192,7 +198,7 @@ const sopItems = [
 - Accountability: Officers should be responsible for their actions and decisions, especially when they impact the public.
 - Service to the Community: Officers should always put the needs and safety of the community first.
 
-**Code of Conduct** (A set of rules outlining the expected behaviour and actions of police officers in their daily duties.)
+Code of Conduct (A set of rules outlining the expected behaviour and actions of police officers in their daily duties.)
 
 - Use of Force: Officers must only use force when absolutely necessary and in the least amount required to control a situation.
 - Duty to Report Misconduct: Officers are required to report any unethical behaviour or misconduct by fellow officers.
@@ -231,3 +237,4 @@ const Sop = () => {
 };
 
 export default Sop;
+
