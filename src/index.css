@@ -6,13 +6,13 @@
 @layer base {
   :root {
     --background: 10 10 10; /* Dark Black */
-    --foreground: 255 215 0; /* Gold */
+    --foreground: 255 255 255; /* White */
     
     --card: 10 10 10; /* Dark Black */
-    --card-foreground: 255 215 0; /* Gold */
+    --card-foreground: 255 255 255; /* White */
     
     --popover: 10 10 10; /* Dark Black */
-    --popover-foreground: 255 215 0; /* Gold */
+    --popover-foreground: 255 255 255; /* White */
     
     --primary: 255 215 0; /* Gold */
     --primary-foreground: 10 10 10; /* Dark Black */
@@ -39,11 +39,11 @@
   .dark {
     /* Same as light mode for our theme */
     --background: 10 10 10;
-    --foreground: 255 215 0;
+    --foreground: 255 255 255;
     --card: 10 10 10;
-    --card-foreground: 255 215 0;
+    --card-foreground: 255 255 255;
     --popover: 10 10 10;
-    --popover-foreground: 255 215 0;
+    --popover-foreground: 255 255 255;
     --primary: 255 215 0;
     --primary-foreground: 10 10 10;
     --secondary: 74 74 74;
