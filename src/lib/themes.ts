@@ -1,0 +1,136 @@
+
+export type ThemeColors = {
+  name: string;
+  background: string;
+  foreground: string;
+  card: string;
+  cardForeground: string;
+  popover: string;
+  popoverForeground: string;
+  primary: string;
+  primaryForeground: string;
+  secondary: string;
+  secondaryForeground: string;
+  muted: string;
+  mutedForeground: string;
+  accent: string;
+  accentForeground: string;
+  destructive: string;
+  destructiveForeground: string;
+  border: string;
+  input: string;
+  ring: string;
+};
+
+export const themes: Record<string, ThemeColors> = {
+  nord: {
+    name: "Nord",
+    background: "#2E3440",
+    foreground: "#ECEFF4",
+    card: "#3B4252",
+    cardForeground: "#E5E9F0",
+    popover: "#434C5E",
+    popoverForeground: "#E5E9F0",
+    primary: "#88C0D0",
+    primaryForeground: "#2E3440",
+    secondary: "#81A1C1",
+    secondaryForeground: "#D8DEE9",
+    muted: "#4C566A",
+    mutedForeground: "#D8DEE9",
+    accent: "#5E81AC",
+    accentForeground: "#ECEFF4",
+    destructive: "#BF616A",
+    destructiveForeground: "#ECEFF4",
+    border: "#434C5E",
+    input: "#3B4252",
+    ring: "#88C0D0",
+  },
+  gruvbox: {
+    name: "Gruvbox",
+    background: "#282828",
+    foreground: "#fbf1c7",
+    card: "#3c3836",
+    cardForeground: "#ebdbb2",
+    popover: "#504945",
+    popoverForeground: "#ebdbb2",
+    primary: "#fe8019",
+    primaryForeground: "#282828",
+    secondary: "#d65d0e",
+    secondaryForeground: "#fbf1c7",
+    muted: "#504945",
+    mutedForeground: "#d5c4a1",
+    accent: "#b8bb26",
+    accentForeground: "#282828",
+    destructive: "#fb4934",
+    destructiveForeground: "#fbf1c7",
+    border: "#504945",
+    input: "#3c3836",
+    ring: "#fe8019",
+  },
+  aurum: {
+    name: "Aurum",
+    background: "#0A0A0A",
+    foreground: "#FFFFFF",
+    card: "#1A1A1A",
+    cardForeground: "#FFFFFF",
+    popover: "#1A1A1A",
+    popoverForeground: "#FFFFFF",
+    primary: "#FFD700",
+    primaryForeground: "#0A0A0A",
+    secondary: "#DAA520",
+    secondaryForeground: "#FFFFFF",
+    muted: "#4A4A4A",
+    mutedForeground: "#8E8E8E",
+    accent: "#B8860B",
+    accentForeground: "#FFFFFF",
+    destructive: "#D2691E",
+    destructiveForeground: "#FFFFFF",
+    border: "#4A4A4A",
+    input: "#4A4A4A",
+    ring: "#FFD700",
+  },
+  tokyonight: {
+    name: "Tokyo Night",
+    background: "#1F2335",
+    foreground: "#C0CAF5",
+    card: "#24283B",
+    cardForeground: "#A9B1D6",
+    popover: "#292E42",
+    popoverForeground: "#A9B1D6",
+    primary: "#7AA2F7",
+    primaryForeground: "#1F2335",
+    secondary: "#7DCFFF",
+    secondaryForeground: "#C0CAF5",
+    muted: "#3B4261",
+    mutedForeground: "#A9B1D6",
+    accent: "#BB9AFF",
+    accentForeground: "#1F2335",
+    destructive: "#F7768E",
+    destructiveForeground: "#1F2335",
+    border: "#3B4261",
+    input: "#292E42",
+    ring: "#7AA2F7",
+  },
+  dracula: {
+    name: "Dracula",
+    background: "#282A36",
+    foreground: "#F8F8F2",
+    card: "#44475A",
+    cardForeground: "#F8F8F2",
+    popover: "#44475A",
+    popoverForeground: "#F8F8F2",
+    primary: "#BD93F9",
+    primaryForeground: "#282A36",
+    secondary: "#6272A4",
+    secondaryForeground: "#F8F8F2",
+    muted: "#44475A",
+    mutedForeground: "#6272A4",
+    accent: "#FF79C6",
+    accentForeground: "#282A36",
+    destructive: "#FF5555",
+    destructiveForeground: "#F8F8F2",
+    border: "#44475A",
+    input: "#44475A",
+    ring: "#BD93F9",
+  }
+};

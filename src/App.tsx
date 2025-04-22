@@ -12,6 +12,7 @@ import Amendments from "./pages/Amendments";
 import ShortForms from "./pages/ShortForms";
 import CaseLaws from "./pages/CaseLaws";
 import Sop from "./pages/Sop";
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,9 @@ const App = () => (
           <div className="min-h-screen flex w-full">
             <Sidebar />
             <main className="flex-1">
+              <div className="p-4 flex justify-end">
+                <ThemeSwitcher />
+              </div>
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/amendments" element={<Amendments />} />
