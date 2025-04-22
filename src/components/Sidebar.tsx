@@ -22,20 +22,20 @@ const menuItems = [
 
 export function Sidebar() {
   return (
-    <SidebarComponent>
+    <SidebarComponent className="bg-[hsl(var(--sidebar))]">
       <div className="p-4 flex items-center gap-2">
-        <Siren className="h-8 w-8 text-[#FFD700]" />
-        <span className="text-lg font-bold text-[#FFD700]">PD RP Guide</span>
+        <Siren className="h-8 w-8 text-[hsl(var(--logo))]" />
+        <span className="text-lg font-bold text-[hsl(var(--logo))]">PD RP Guide</span>
       </div>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[hsl(var(--sidebarForeground))]">Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link to={item.path} className="flex items-center gap-2">
+                    <Link to={item.path} className="flex items-center gap-2 text-[hsl(var(--sidebarForeground))]">
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>
@@ -46,7 +46,7 @@ export function Sidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <div className="absolute bottom-4 left-4 text-[#C8C8C9] text-sm opacity-70">
+      <div className="absolute bottom-4 left-4 text-[hsl(var(--sidebarForeground))] text-sm opacity-70">
         Made by Aansh (AmoRCiTo)
       </div>
     </SidebarComponent>

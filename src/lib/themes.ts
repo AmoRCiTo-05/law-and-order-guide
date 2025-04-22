@@ -20,6 +20,9 @@ export type ThemeColors = {
   border: string;
   input: string;
   ring: string;
+  sidebar: string;
+  sidebarForeground: string;
+  logo: string;
 };
 
 export const themes: Record<string, ThemeColors> = {
@@ -44,6 +47,9 @@ export const themes: Record<string, ThemeColors> = {
     border: "#434C5E",
     input: "#3B4252",
     ring: "#88C0D0",
+    sidebar: "#2E3440",
+    sidebarForeground: "#D8DEE9",
+    logo: "#8FBCBB",
   },
   gruvbox: {
     name: "Gruvbox",
@@ -66,6 +72,9 @@ export const themes: Record<string, ThemeColors> = {
     border: "#504945",
     input: "#3c3836",
     ring: "#fe8019",
+    sidebar: "#282828",
+    sidebarForeground: "#fbf1c7",
+    logo: "#fabd2f",
   },
   aurum: {
     name: "Aurum",
@@ -88,6 +97,9 @@ export const themes: Record<string, ThemeColors> = {
     border: "#4A4A4A",
     input: "#4A4A4A",
     ring: "#FFD700",
+    sidebar: "#0A0A0A",
+    sidebarForeground: "#FFFFFF",
+    logo: "#FFD700",
   },
   tokyonight: {
     name: "Tokyo Night",
@@ -110,6 +122,9 @@ export const themes: Record<string, ThemeColors> = {
     border: "#3B4261",
     input: "#292E42",
     ring: "#7AA2F7",
+    sidebar: "#1F2335",
+    sidebarForeground: "#A9B1D6",
+    logo: "#BB9AFF",
   },
   dracula: {
     name: "Dracula",
@@ -132,5 +147,8 @@ export const themes: Record<string, ThemeColors> = {
     border: "#44475A",
     input: "#44475A",
     ring: "#BD93F9",
+    sidebar: "#282A36",
+    sidebarForeground: "#F8F8F2",
+    logo: "#8BE9FD",
   }
 };

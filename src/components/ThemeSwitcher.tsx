@@ -1,5 +1,5 @@
 
-import { Check } from "lucide-react";
+import { Check, Palette } from "lucide-react";
 import { themes } from "@/lib/themes";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,10 +12,10 @@ import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 export function ThemeSwitcher() {
-  const [theme, setTheme] = useState("aurum");
+  const [theme, setTheme] = useState("nord"); // Default to Nord
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "aurum";
+    const storedTheme = localStorage.getItem("theme") || "nord"; // Default to Nord
     setTheme(storedTheme);
     applyTheme(storedTheme);
   }, []);
@@ -25,6 +25,8 @@ export function ThemeSwitcher() {
     if (!selectedTheme) return;
 
     const root = document.documentElement;
+    
+    // Apply all theme properties
     Object.entries(selectedTheme).forEach(([key, value]) => {
       if (key === "name") return;
       
@@ -37,6 +39,12 @@ export function ThemeSwitcher() {
       root.style.setProperty(`--${key}`, `${r} ${g} ${b}`);
     });
 
+    // Force a refresh of components by toggling a class
+    document.body.classList.remove("theme-refresh");
+    setTimeout(() => {
+      document.body.classList.add("theme-refresh");
+    }, 10);
+
     localStorage.setItem("theme", themeName);
     setTheme(themeName);
     toast(`Theme changed to ${selectedTheme.name}`);
@@ -46,8 +54,14 @@ export function ThemeSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="w-[180px] justify-between">
-          {themes[theme]?.name || "Select theme"}
-          <span className="ml-2 h-4 w-4 rounded-full" style={{ backgroundColor: themes[theme]?.primary }} />
+          <div className="flex items-center gap-2">
+            <Palette className="h-4 w-4" />
+            <span>{themes[theme]?.name || "Select theme"}</span>
+          </div>
+          <span 
+            className="ml-2 h-4 w-4 rounded-full" 
+            style={{ backgroundColor: themes[theme]?.primary }}
+          />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -55,11 +69,16 @@ export function ThemeSwitcher() {
           <DropdownMenuItem
             key={themeKey}
             onClick={() => applyTheme(themeKey)}
-            className="flex items-center justify-between"
+            className="flex items-center justify-between gap-2"
           >
-            {themeValue.name}
-            {theme === themeKey && <Check className="h-4 w-4" />}
-            <span className="ml-2 h-4 w-4 rounded-full" style={{ backgroundColor: themeValue.primary }} />
+            <span>{themeValue.name}</span>
+            <div className="flex items-center">
+              {theme === themeKey && <Check className="h-4 w-4 mr-1" />}
+              <span 
+                className="h-4 w-4 rounded-full" 
+                style={{ backgroundColor: themeValue.primary }}
+              />
+            </div>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

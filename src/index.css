@@ -5,58 +5,65 @@
 
 @layer base {
   :root {
-    --background: 10 10 10; /* Dark Black */
-    --foreground: 255 255 255; /* White */
+    --background: 46 52 64; /* Nord background */
+    --foreground: 236 239 244; /* Nord foreground */
     
-    --card: 10 10 10; /* Dark Black */
-    --card-foreground: 255 255 255; /* White */
+    --card: 59 66 82; /* Nord card */
+    --card-foreground: 229 233 240; /* Nord card foreground */
     
-    --popover: 10 10 10; /* Dark Black */
-    --popover-foreground: 255 255 255; /* White */
+    --popover: 67 76 94; /* Nord popover */
+    --popover-foreground: 229 233 240; /* Nord popover foreground */
     
-    --primary: 255 215 0; /* Gold */
-    --primary-foreground: 10 10 10; /* Dark Black */
+    --primary: 136 192 208; /* Nord primary */
+    --primary-foreground: 46 52 64; /* Nord primary foreground */
     
-    --secondary: 74 74 74; /* Dark Gray */
-    --secondary-foreground: 255 215 0; /* Gold */
+    --secondary: 129 161 193; /* Nord secondary */
+    --secondary-foreground: 216 222 233; /* Nord secondary foreground */
     
-    --muted: 26 31 44; /* Dark Purple */
-    --muted-foreground: 142 145 150; /* Neutral Gray */
+    --muted: 76 86 106; /* Nord muted */
+    --muted-foreground: 216 222 233; /* Nord muted foreground */
     
-    --accent: 142 145 150; /* Neutral Gray */
-    --accent-foreground: 255 215 0; /* Gold */
+    --accent: 94 129 172; /* Nord accent */
+    --accent-foreground: 236 239 244; /* Nord accent foreground */
     
-    --destructive: 211 47 47; /* Strong Red */
-    --destructive-foreground: 255 255 255; /* White */
+    --destructive: 191 97 106; /* Nord destructive */
+    --destructive-foreground: 236 239 244; /* Nord destructive foreground */
     
-    --border: 74 74 74; /* Dark Gray */
-    --input: 74 74 74; /* Dark Gray */
-    --ring: 255 215 0; /* Gold */
+    --border: 67 76 94; /* Nord border */
+    --input: 59 66 82; /* Nord input */
+    --ring: 136 192 208; /* Nord ring */
+    
+    --sidebar: 46 52 64; /* Nord sidebar */
+    --sidebarForeground: 216 222 233; /* Nord sidebar foreground */
+    --logo: 143 188 187; /* Nord logo color */
     
     --radius: 0.75rem;
   }
 
   .dark {
-    /* Same as light mode for our theme */
-    --background: 10 10 10;
-    --foreground: 255 255 255;
-    --card: 10 10 10;
-    --card-foreground: 255 255 255;
-    --popover: 10 10 10;
-    --popover-foreground: 255 255 255;
-    --primary: 255 215 0;
-    --primary-foreground: 10 10 10;
-    --secondary: 74 74 74;
-    --secondary-foreground: 255 215 0;
-    --muted: 26 31 44;
-    --muted-foreground: 142 145 150;
-    --accent: 142 145 150;
-    --accent-foreground: 255 215 0;
-    --destructive: 211 47 47;
-    --destructive-foreground: 255 255 255;
-    --border: 74 74 74;
-    --input: 74 74 74;
-    --ring: 255 215 0;
+    /* Same as light mode for our theme since we manage themes directly */
+    --background: 46 52 64;
+    --foreground: 236 239 244;
+    --card: 59 66 82;
+    --card-foreground: 229 233 240;
+    --popover: 67 76 94;
+    --popover-foreground: 229 233 240;
+    --primary: 136 192 208;
+    --primary-foreground: 46 52 64;
+    --secondary: 129 161 193;
+    --secondary-foreground: 216 222 233;
+    --muted: 76 86 106;
+    --muted-foreground: 216 222 233;
+    --accent: 94 129 172;
+    --accent-foreground: 236 239 244;
+    --destructive: 191 97 106;
+    --destructive-foreground: 236 239 244;
+    --border: 67 76 94;
+    --input: 59 66 82;
+    --ring: 136 192 208;
+    --sidebar: 46 52 64;
+    --sidebarForeground: 216 222 233;
+    --logo: 143 188 187;
   }
 }
 
@@ -65,6 +72,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
+}
+
+/* Theme refresh animation */
+.theme-refresh * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
