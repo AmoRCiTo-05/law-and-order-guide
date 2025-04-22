@@ -17,7 +17,41 @@ const amendments = [
     title: "No Warrant No Entry",
     description: "Protects against unauthorized entry into private property without a warrant.",
   },
-  // ... continuing with other amendments
+  {
+    number: "4th",
+    title: "No Warrant No Search & Seizure",
+    description: "Prohibits unreasonable searches and seizures without a warrant.",
+  },
+  {
+    number: "5th",
+    title: "Protection Against Self-Incrimination",
+    description: "Without Evidence a LEO cannot incriminate through interrogation & threats, Directly / Indirectly",
+  },
+  {
+    number: "6th",
+    title: "Right to Attorney",
+    description: "Guarantees the right to legal representation in criminal cases.",
+  },
+  {
+    number: "7th",
+    title: "Right to Trial by a Judge",
+    description: "Ensures the right to a fair trial presided over by a judge.",
+  },
+  {
+    number: "8th",
+    title: "Protection Against Cruel Punishment",
+    description: "No cruel or unusual punishments / not limited to excessive fines",
+  },
+  {
+    number: "9th",
+    title: "Unlisted Rights",
+    description: "Protects rights not listed in Constitution",
+  },
+  {
+    number: "10th",
+    title: "Federal Powers",
+    description: "Federal Government possess powers only listed in Constitution",
+  },
 ];
 
 const Amendments = () => {
