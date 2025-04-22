@@ -1,13 +1,12 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const sopItems = [
   {
-    title: "What is SOP?",
+    title: "1. What is SOP?",
     content: "Definition: Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guide police officers in their work. These procedures include various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
   },
   {
-    title: "Code of Ethics vs Code of Conduct",
+    title: "2. Code of Ethics vs Code of Conduct",
     content: `
     Code of Ethics:
     - Integrity: Officers should always act with honesty and fairness.
@@ -25,11 +24,11 @@ const sopItems = [
     `
   },
   {
-    title: "Chain of Command",
+    title: "3. Chain of Command",
     content: "Officers are required to follow orders from their seniors without questioning, demonstrating professionalism. However, officers are only obligated to follow orders related to departmental duties and not personal tasks unrelated to the department. If a senior officer threatens or mistreats an officer, the officer can file a grievance report to the captain or higher authority to address the situation. Additionally, if an officer has an issue with a colleague or senior, they should first seek assistance from a senior officer. If this approach fails, they may escalate the matter to the Human Resources department for resolution."
   },
   {
-    title: "Bonafide and Non-Bonafide Evidence",
+    title: "4. Bonafide and Non-Bonafide Evidence",
     content: `
     Bonafide Evidence: Genuine, trustworthy evidence admissible in court.
     Examples: Eyewitness testimony, physical evidence like fingerprints or DNA, authenticated documents.
@@ -39,7 +38,7 @@ const sopItems = [
     `
   },
   {
-    title: "Frisk vs Search",
+    title: "5. Frisk vs Search",
     content: `
     Frisk:
     - Brief pat-down for weapons
@@ -55,7 +54,7 @@ const sopItems = [
     `
   },
   {
-    title: "Miranda Rights",
+    title: "6. Miranda Rights",
     content: `
     Rights that must be read during detainment/arrest and before questioning:
     - Right to remain silent
@@ -66,7 +65,7 @@ const sopItems = [
     `
   },
   {
-    title: "Levels of Force",
+    title: "7. Levels of Force",
     content: `
     1. Officer Presence: Professional demeanor
     2. Verbalization: Calm commands
@@ -76,23 +75,23 @@ const sopItems = [
     `
   },
   {
-    title: "De-escalation of Force",
+    title: "8. De-escalation of Force",
     content: "Using communication and strategies to calm situations without physical force. Focus on peaceful resolution through verbal communication, reducing police presence, and maintaining professional demeanor. Main priority is always to de-escalate the situation."
   },
   {
-    title: "Escalation of Force",
+    title: "9. Escalation of Force",
     content: "Gradual increase in force from verbal commands to physical intervention when necessary. Example: If a civilian draws a weapon during questioning, officer may escalate from verbal to lethal force to neutralize the threat."
   },
   {
-    title: "Match of Force",
+    title: "10. Match of Force",
     content: "Officers match the level of force/equipment to counter threats effectively. Examples include using similar weapons or vehicles to match criminal capabilities."
   },
   {
-    title: "10-Codes",
+    title: "11. 10-Codes",
     content: "Short phrases or numbers used for quick radio communication to improve speed and clarity."
   },
   {
-    title: "Warrants and Types",
+    title: "12. Warrants and Types",
     content: `
     - AOS (Arrest on Sight): Requires high command/DA permission
     - Search & Seizure: Judge approval needed, specific items only
@@ -101,7 +100,7 @@ const sopItems = [
     `
   },
   {
-    title: "Bail",
+    title: "13. Bail",
     content: `
     Bail is a financial guarantee that allows a defendant to be released from custody while awaiting trial:
     
@@ -116,7 +115,7 @@ const sopItems = [
     `
   },
   {
-    title: "Detain vs Arrest",
+    title: "14. Detain vs Arrest",
     content: `
     Detain:
     - Temporary hold for questioning
@@ -130,7 +129,7 @@ const sopItems = [
     `
   },
   {
-    title: "Types of Crimes",
+    title: "15. Types of Crimes",
     content: `
     - Felony: Serious crimes (murder, arson)
     - Misdemeanor: Lesser offenses (trespassing)
@@ -139,7 +138,7 @@ const sopItems = [
     `
   },
   {
-    title: "BOLO vs Warrants",
+    title: "16. BOLO vs Warrants",
     content: `
     BOLO:
     - Alert to watch for person/vehicle
@@ -153,7 +152,7 @@ const sopItems = [
     `
   },
   {
-    title: "Use of Taser",
+    title: "17. Use of Taser",
     content: `
     - Avoid wet areas/heights
     - No continuous use
@@ -163,19 +162,19 @@ const sopItems = [
     `
   },
   {
-    title: "N+2 Rule",
+    title: "18. N+2 Rule",
     content: "Server rule: officers = suspects + 2. Exceptions: government employee kidnapping, warrants, terrorist attacks, gang wars. Officers can use any weapons in these cases."
   },
   {
-    title: "Reasonable Suspicion",
+    title: "19. Reasonable Suspicion",
     content: "Solid reason to believe criminal activity might be occurring. Less than probable cause, allows for stop/frisk/detainment. Based on specific facts/observations."
   },
   {
-    title: "Probable Cause",
+    title: "20. Probable Cause",
     content: "Bonafide evidence of crime commission. Example: smelling marijuana and seeing drugs in plain view during traffic stop. Sufficient for arrest/search."
   },
   {
-    title: "Reports/FIR vs Chargesheet",
+    title: "21. Reports/FIR vs Chargesheet",
     content: `
     Reports/FIR:
     - Initial incident documentation
@@ -187,24 +186,6 @@ const sopItems = [
     - Based on evidence
     - Leads to prosecution
     `
-  },
-  {
-    title: "Difference between Code of Conduct and Code of Ethics?",
-    content: `Code of Ethics (A set of principles that guide police officers in making moral and just decisions.)
-
-- Integrity: Officers should always act with honesty and fairness, even when no one is watching.
-- Respect for Human Rights: Officers must treat all individuals with dignity and respect, regardless of their background.
-- Impartiality: Officers should make decisions without bias or favouritism.
-- Accountability: Officers should be responsible for their actions and decisions, especially when they impact the public.
-- Service to the Community: Officers should always put the needs and safety of the community first.
-
-Code of Conduct (A set of rules outlining the expected behaviour and actions of police officers in their daily duties.)
-
-- Use of Force: Officers must only use force when absolutely necessary and in the least amount required to control a situation.
-- Duty to Report Misconduct: Officers are required to report any unethical behaviour or misconduct by fellow officers.
-- Professional Appearance: Officers must maintain a neat, clean, and professional appearance while on duty, following the department's uniform policies.
-- Confidentiality: Officers must keep sensitive information private and not disclose details of investigations to unauthorized individuals.
-- Respect for Authority: Officers must follow lawful orders from supervisors and other senior officials.`
   }
 ];
 
@@ -237,4 +218,3 @@ const Sop = () => {
 };
 
 export default Sop;
-
