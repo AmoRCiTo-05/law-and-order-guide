@@ -199,7 +199,7 @@ const Sop = () => {
             <AccordionTrigger className="px-4 py-3 text-[#FFD700] hover:text-[#FFD700]/80 font-bold">
               {item.title}
             </AccordionTrigger>
-            <AccordionContent className="px-4 py-3 text-[#FFD700]/90">
+            <AccordionContent className="px-4 py-3 text-white">
               <div className="prose prose-invert max-w-none">
                 {item.content}
               </div>

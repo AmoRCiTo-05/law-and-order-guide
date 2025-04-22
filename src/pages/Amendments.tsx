@@ -65,7 +65,7 @@ const Amendments = () => {
               <CardTitle>{amendment.number} Amendment - {amendment.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600">{amendment.description}</p>
+              <p className="text-white font-bold">{amendment.description}</p>
             </CardContent>
           </Card>
         ))}

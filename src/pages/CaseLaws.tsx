@@ -55,7 +55,7 @@ const CaseLaws = () => {
               <CardTitle>{law.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600">{law.description}</p>
+              <p className="text-white font-bold">{law.description}</p>
             </CardContent>
           </Card>
         ))}

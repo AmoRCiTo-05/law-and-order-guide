@@ -34,19 +34,19 @@ const shortForms = [
 const ShortForms = () => {
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Law Enforcement Short Forms</h1>
+      <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Law Enforcement Short Forms</h1>
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Abbreviation</TableHead>
-            <TableHead>Meaning</TableHead>
+            <TableHead className="text-[#FFD700]">Abbreviation</TableHead>
+            <TableHead className="text-[#FFD700]">Meaning</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {shortForms.map((form) => (
-            <TableRow key={form.abbreviation}>
-              <TableCell className="font-medium">{form.abbreviation}</TableCell>
-              <TableCell>{form.meaning}</TableCell>
+            <TableRow key={form.abbreviation} className="hover:bg-black/50">
+              <TableCell className="font-bold text-white">{form.abbreviation}</TableCell>
+              <TableCell className="text-white">{form.meaning}</TableCell>
             </TableRow>
           ))}
         </TableBody>
