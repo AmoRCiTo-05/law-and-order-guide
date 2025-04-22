@@ -20,11 +20,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <SidebarProvider>
-        <div className="min-h-screen flex w-full">
-          <Sidebar />
-          <main className="flex-1">
-            <BrowserRouter>
+      <BrowserRouter>
+        <SidebarProvider>
+          <div className="min-h-screen flex w-full">
+            <Sidebar />
+            <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/amendments" element={<Amendments />} />
@@ -33,10 +33,10 @@ const App = () => (
                 <Route path="/sop" element={<Sop />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
-            </BrowserRouter>
-          </main>
-        </div>
-      </SidebarProvider>
+            </main>
+          </div>
+        </SidebarProvider>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
