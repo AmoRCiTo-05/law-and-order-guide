@@ -57,12 +57,12 @@ const amendments = [
 const Amendments = () => {
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Constitutional Amendments</h1>
+      <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Constitutional Amendments</h1>
       <div className="grid gap-6">
         {amendments.map((amendment) => (
-          <Card key={amendment.number}>
+          <Card key={amendment.number} className="bg-black/50 border border-[#FFD700]/20">
             <CardHeader>
-              <CardTitle>{amendment.number} Amendment - {amendment.title}</CardTitle>
+              <CardTitle className="text-[#FFD700]">{amendment.number} Amendment - {amendment.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-white font-bold">{amendment.description}</p>

@@ -187,7 +187,7 @@ const sopItems = [
 
 const Sop = () => {
   return (
-    <div className="container mx-auto p-6 bg-black min-h-screen">
+    <div className="container mx-auto p-6 min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Standard Operating Procedures (SOP)</h1>
       <Accordion type="single" collapsible className="w-full space-y-4">
         {sopItems.map((item, index) => (
