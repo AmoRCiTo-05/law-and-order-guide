@@ -4,83 +4,89 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const sopItems = [
   {
     title: "What is SOP?",
-    content: "Guidelines set by police or government for officers. Includes: Reasonable suspicion, probable cause, chain of command, use of force, etc.",
+    content: "Standard Operating Procedures (SOPs) are guidelines provided by police management or government to guide police officers in their work. These procedures include various aspects such as identifying reasonable suspicion, establishing probable cause, adhering to the chain of command, managing the escalation and de-escalation of force, ensuring the appropriate level of force, and addressing other operational considerations."
   },
   {
-    title: "What is Code of Conduct?",
-    content: "Set of ethical guidelines for officer behavior. Key Points: Respect civilians' rights, inform Miranda rights, maintain professionalism, adhere to dress code, use official vehicles.",
+    title: "Code of Ethics vs Code of Conduct",
+    content: `
+    **Code of Ethics:**
+    - Integrity: Officers should always act with honesty and fairness.
+    - Respect for Human Rights: Treat all individuals with dignity.
+    - Impartiality: Make decisions without bias.
+    - Accountability: Be responsible for actions and decisions.
+    - Service to the Community: Prioritize community safety.
+
+    **Code of Conduct:**
+    - Use of Force: Only use force when absolutely necessary.
+    - Duty to Report Misconduct: Report unethical behavior.
+    - Professional Appearance: Maintain a neat, clean uniform.
+    - Confidentiality: Keep sensitive information private.
+    - Respect for Authority: Follow lawful orders from supervisors.
+    `
   },
   {
-    title: "What is Chain of Command?",
-    content: "Hierarchical order of authority in the department. Key Points: Officers must follow senior officers' orders, grievances can be escalated to HR, can file grievances if mistreated by a senior.",
+    title: "Chain of Command",
+    content: "Officers must follow orders from seniors related to departmental duties. If a senior officer threatens or mistreats an officer, a grievance report can be filed to higher authorities. Officers should first seek assistance from a senior officer and can escalate to HR if needed."
   },
   {
-    title: "What is Bonafide and Non-Bonafide Evidence?",
-    content: "Bonafide Evidence: Genuine, admissible evidence (e.g., eyewitness, DNA). Non-Bonafide Evidence: Unreliable or fabricated evidence (e.g., hearsay, illegally obtained).",
+    title: "Bonafide and Non-Bonafide Evidence",
+    content: `
+    **Bonafide Evidence:** Genuine and trustworthy evidence admissible in court.
+    Examples: Eyewitness testimony, physical evidence like fingerprints or DNA, authenticated documents.
+
+    **Non-Bonafide Evidence:** Unreliable or inadmissible evidence.
+    Examples: Hearsay, illegally obtained evidence, fabricated documentation.
+    `
   },
   {
-    title: "Difference Between Frisk and Search?",
-    content: "Frisk: Brief pat-down for weapons, safety measure. Search: Thorough examination for criminal evidence, requires warrant or consent.",
+    title: "Difference Between Frisk and Search",
+    content: `
+    **Frisk:**
+    - Brief pat-down to check for weapons
+    - Requires reasonable suspicion
+    - Focuses on safety
+    - Limited to outer clothing
+
+    **Search:**
+    - Thorough examination of belongings
+    - Requires warrant, probable cause, or consent
+    - Aims to find evidence of crime
+    - Can include detailed personal and property examination
+    `
   },
   {
-    title: "What is Miranda Rights?",
-    content: "Rights: You have the right to remain silent. Anything you say can & will be used against you in the court of law. You have the right to have an attorney. If you can't afford one, one will be provided to you by the state 'IF AVAILABLE'. Do You understand your rights? Key Points: Must be read during detainment or arrest.",
+    title: "Miranda Rights",
+    content: `
+    Key Rights:
+    - Right to remain silent
+    - Anything said can be used in court
+    - Right to an attorney
+    - State will provide an attorney if cannot afford one
+
+    Must be read during detainment or arrest before questioning.
+    `
   },
   {
-    title: "How Many Levels of Force?",
-    content: "Officer Presence, Verbalization, Empty Hand Control, Less-Lethal Force, Lethal Force",
+    title: "Levels of Force",
+    content: `
+    1. Officer Presence: Deterrence through professional demeanor
+    2. Verbalization: Calm, non-threatening commands
+    3. Empty Hand Control: Physical restraint techniques
+    4. Less-Lethal Force: Tasers, batons
+    5. Lethal Force: Firearms, used only in serious threat situations
+    `
   },
   {
-    title: "What is De-escalation of Force?",
-    content: "Definition: Using communication and non-threatening body language to reduce tension. Key Points: Avoid physical force when possible, prioritize safety and peaceful resolution.",
+    title: "De-escalation of Force",
+    content: "Using communication and non-threatening strategies to calm situations without physical force. Prioritize peaceful resolution through communication, reducing police presence, and maintaining a calm, firm approach."
   },
   {
-    title: "What is Escalation of Force?",
-    content: "Definition: Gradual increase in force used by officers. Key Points: Starts with verbal commands, then physical restraint, and can escalate to lethal force if needed.",
+    title: "Escalation of Force",
+    content: "Gradual increase in force from verbal commands to physical restraint and potentially lethal force when a situation becomes critically dangerous. Example: Transitioning from verbal communication to using a taser or firearm when a suspect becomes immediately threatening."
   },
   {
-    title: "What is Match of Force?",
-    content: "Definition: Using force that matches the threat posed by suspects. Key Points: Officers match criminal's weapon or capability, can use any weapon in specific high-threat situations.",
-  },
-  {
-    title: "What are 10-Codes?",
-    content: "Definition: Short phrases or numbers used for quick communication. Purpose: To improve speed and clarity in radio communications.",
-  },
-  {
-    title: "What are Warrants and Types of Them?",
-    content: "Definition: Legal orders from a judge allowing police action. Types: AOS (Arrest on sight), Search and Seizure (Allows property search and seizure of illegal items), Raid Warrant (Seize any illegal items), KOS (Kill on sight for terrorists).",
-  },
-  {
-    title: "What is Bail?",
-    content: "Definition: Money paid to release a suspect until trial. Key Points: Magistrate grants bail for misdemeanors, judge for felonies. Guarantor is responsible for the suspect's appearance. Missing court results in a warrant for both suspect and guarantor.",
-  },
-  {
-    title: "Difference Between Detain and Arrest?",
-    content: "Detain: Temporary holding for questioning, based on reasonable suspicion. Arrest: Taking into custody with probable cause to charge with a crime.",
-  },
-  {
-    title: "How Many Types of Crimes?",
-    content: "Felony: Serious crimes with long sentences (e.g., murder). Misdemeanor: Lesser crimes with shorter sentences (e.g., trespassing). Infraction: Minor offenses, typically fines (e.g., speeding). HUT: Held Until Trial, for serious offenses (e.g., terrorism).",
-  },
-  {
-    title: "Difference Between BOLO and Warrants?",
-    content: "BOLO: Alert to watch for a person or object, no authority to arrest. Warrant: Legal document authorizing an arrest, search, or seizure.",
-  },
-  {
-    title: "Use of Taser?",
-    content: "Location Restrictions: Avoid wet areas or heights. Usage: No repeated tasering, cooldown between uses, proper warning required. Conditions: Used for fleeing suspects or safety.",
-  },
-  {
-    title: "What is N+2?",
-    content: "Definition: A server rule where officers are +2 from the number of suspects. Exceptions: No N+2 for kidnappings, warrants, terrorist attacks, or gang wars. Weapon Use: Officers can use any weapons in these cases.",
-  },
-  {
-    title: "Explain Reasonable Suspicion?",
-    content: "Definition: A belief based on facts that someone might be involved in a crime. Key Points: Less than probable cause, can lead to detaining or frisking, but not an arrest.",
-  },
-  {
-    title: "Explain Probable Cause?",
-    content: "Definition: Legal justification with evidence to believe a crime has occurred. Example: Smelling marijuana and seeing drugs in plain view gives probable cause for search or arrest.",
+    title: "Match of Force",
+    content: "Using tools and tactics equivalent to the threat level. Officers match criminal capabilities, such as using similar weapons or vehicles to neutralize a threat effectively."
   }
 ];
 
