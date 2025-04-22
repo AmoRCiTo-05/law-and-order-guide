@@ -1,5 +1,5 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Watermark from "@/components/Watermark";
 
 const caseLaws = [
   {
@@ -46,7 +46,7 @@ const caseLaws = [
 
 const CaseLaws = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 relative">
       <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Case Laws</h1>
       <div className="grid gap-6">
         {caseLaws.map((law) => (
@@ -60,6 +60,7 @@ const CaseLaws = () => {
           </Card>
         ))}
       </div>
+      <Watermark />
     </div>
   );
 };

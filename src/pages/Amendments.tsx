@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Watermark from "@/components/Watermark";
 
 const amendments = [
   {
@@ -71,9 +71,7 @@ const Amendments = () => {
           </Card>
         ))}
       </div>
-      <div className="absolute bottom-4 left-4 text-[#C8C8C9] text-sm opacity-70">
-        Made by Aansh (AmoRCiTo)
-      </div>
+      <Watermark />
     </div>
   );
 };
