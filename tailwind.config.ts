@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,32 +20,38 @@ export default {
     },
     extend: {
       colors: {
-        // Premium Aurum Color Palette
-        background: {
-          DEFAULT: '#0A0A0A', // Deep Black
-          foreground: '#FFD700', // Gold
-        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: '#FFD700', // Gold
-          foreground: '#0A0A0A', // Deep Black
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: '#4A4A4A', // Dark Gray
-          foreground: '#FFD700', // Gold
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-        accent: {
-          DEFAULT: '#8E9196', // Neutral Gray
-          foreground: '#FFD700', // Gold
-        },
-        border: '#4A4A4A', // Dark Gray border
-        ring: '#FFD700', // Gold ring
         destructive: {
-          DEFAULT: '#D32F2F', // Strong Red
-          foreground: '#FFFFFF',
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: '#1A1F2C', // Dark Purple
-          foreground: '#8E9196', // Neutral Gray
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       borderRadius: {
