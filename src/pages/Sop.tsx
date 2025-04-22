@@ -1,10 +1,9 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const sopItems = [
   {
     title: "What is SOP?",
-    content: "Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guides the police officers in their work. These procedures includes various aspects such as identifying reasonable suspicion, establishing probable cause, adhering to the chain of command, managing the escalation and de-escalation of force, ensuring the appropriate level of force, and addressing other operational considerations."
+    content: "**Definition:** Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guide police officers in their work. These procedures include various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
   },
   {
     title: "Code of Ethics vs Code of Conduct",
@@ -200,8 +199,10 @@ const Sop = () => {
               {item.title}
             </AccordionTrigger>
             <AccordionContent className="px-4 py-3 text-white">
-              <div className="prose prose-invert max-w-none">
-                {item.content}
+              <div className="prose prose-invert max-w-none whitespace-pre-wrap">
+                {item.content.split('\n').map((line, idx) => (
+                  <p key={idx} className="mb-2 font-bold">{line}</p>
+                ))}
               </div>
             </AccordionContent>
           </AccordionItem>
