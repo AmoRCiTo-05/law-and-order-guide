@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const amendments = [
@@ -56,7 +57,7 @@ const amendments = [
 
 const Amendments = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 relative">
       <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Constitutional Amendments</h1>
       <div className="grid gap-6">
         {amendments.map((amendment) => (
@@ -69,6 +70,9 @@ const Amendments = () => {
             </CardContent>
           </Card>
         ))}
+      </div>
+      <div className="absolute bottom-4 left-4 text-[#C8C8C9] text-sm opacity-70">
+        Made by Aansh (AmoRCiTo)
       </div>
     </div>
   );
