@@ -181,6 +181,24 @@ const sopItems = [
     - Based on evidence
     - Leads to prosecution
     `
+  },
+  {
+    title: "Difference between Code of Conduct and Code of Ethics?",
+    content: `**Code of Ethics** (A set of principles that guide police officers in making moral and just decisions.)
+
+- Integrity: Officers should always act with honesty and fairness, even when no one is watching.
+- Respect for Human Rights: Officers must treat all individuals with dignity and respect, regardless of their background.
+- Impartiality: Officers should make decisions without bias or favouritism.
+- Accountability: Officers should be responsible for their actions and decisions, especially when they impact the public.
+- Service to the Community: Officers should always put the needs and safety of the community first.
+
+**Code of Conduct** (A set of rules outlining the expected behaviour and actions of police officers in their daily duties.)
+
+- Use of Force: Officers must only use force when absolutely necessary and in the least amount required to control a situation.
+- Duty to Report Misconduct: Officers are required to report any unethical behaviour or misconduct by fellow officers.
+- Professional Appearance: Officers must maintain a neat, clean, and professional appearance while on duty, following the department's uniform policies.
+- Confidentiality: Officers must keep sensitive information private and not disclose details of investigations to unauthorized individuals.
+- Respect for Authority: Officers must follow lawful orders from supervisors and other senior officials.`
   }
 ];
 
