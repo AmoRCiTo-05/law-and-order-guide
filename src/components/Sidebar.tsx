@@ -10,7 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Book, File, FileText, Home, Search } from "lucide-react";
+import { Book, File, FileText, Home, Search, Siren } from "lucide-react";
 
 const menuItems = [
   { title: "Home", icon: Home, path: "/" },
@@ -23,6 +23,10 @@ const menuItems = [
 export function Sidebar() {
   return (
     <SidebarComponent>
+      <div className="p-4 flex items-center gap-2">
+        <Siren className="h-8 w-8 text-[#FFD700]" />
+        <span className="text-lg font-bold text-[#FFD700]">PD RP Guide</span>
+      </div>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
