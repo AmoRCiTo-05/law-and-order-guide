@@ -57,7 +57,7 @@ const amendments = [
 
 const Amendments = () => {
   return (
-    <div className="container mx-auto p-6 relative">
+    <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Constitutional Amendments</h1>
       <div className="grid gap-6">
         {amendments.map((amendment) => (
@@ -71,7 +71,6 @@ const Amendments = () => {
           </Card>
         ))}
       </div>
-      <Watermark />
     </div>
   );
 };

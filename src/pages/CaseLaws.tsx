@@ -46,7 +46,7 @@ const caseLaws = [
 
 const CaseLaws = () => {
   return (
-    <div className="container mx-auto p-6 relative">
+    <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Case Laws</h1>
       <div className="grid gap-6">
         {caseLaws.map((law) => (
@@ -60,7 +60,6 @@ const CaseLaws = () => {
           </Card>
         ))}
       </div>
-      <Watermark />
     </div>
   );
 };
