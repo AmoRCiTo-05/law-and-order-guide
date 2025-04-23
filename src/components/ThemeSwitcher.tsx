@@ -39,10 +39,19 @@ export function ThemeSwitcher() {
       root.style.setProperty(`--${key}`, `${r} ${g} ${b}`);
     });
 
-    // Force a refresh of components by toggling a class
+    // Force a refresh of components
     document.body.classList.remove("theme-refresh");
+    document.body.classList.add("theme-refresh");
+
+    // Force reapplication of theme colors to ensure all elements update
     setTimeout(() => {
-      document.body.classList.add("theme-refresh");
+      document.body.style.backgroundColor = `rgb(${root.style.getPropertyValue('--background')})`;
+      document.body.style.color = `rgb(${root.style.getPropertyValue('--foreground')})`;
+      
+      // Create an event for custom components to listen to
+      window.dispatchEvent(new CustomEvent('themechange', { 
+        detail: { theme: themeName } 
+      }));
     }, 10);
 
     localStorage.setItem("theme", themeName);

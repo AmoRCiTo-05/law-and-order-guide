@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Sidebar as SidebarComponent,
   SidebarContent,
@@ -11,6 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { Book, ChevronLeft, File, FileText, Home, MessageSquareText, Search, Siren, Zap } from "lucide-react";
 
@@ -26,10 +27,13 @@ const menuItems = [
 
 export function Sidebar() {
   const [sidebarWidth, setSidebarWidth] = useState("--sidebar-width");
+  const { state, toggleSidebar } = useSidebar();
+  const location = useLocation();
 
   // Toggle sidebar size between default and smaller
   const toggleSidebarSize = () => {
     setSidebarWidth(prev => prev === "--sidebar-width" ? "--sidebar-width-icon" : "--sidebar-width");
+    toggleSidebar();
   };
 
   return (
@@ -39,10 +43,13 @@ export function Sidebar() {
           <Siren className="h-8 w-8 text-[hsl(var(--logo))]" />
           <span className="text-lg font-bold text-[hsl(var(--logo))] hidden md:inline">PD RP Guide</span>
         </div>
-        <button onClick={toggleSidebarSize} className="text-[hsl(var(--sidebarForeground))] p-1 rounded-md hover:bg-[hsl(var(--muted))] transition-colors md:flex items-center justify-center hidden">
-          <ChevronLeft className={`h-5 w-5 transition-transform ${sidebarWidth === "--sidebar-width-icon" ? "rotate-180" : ""}`} />
+        <button 
+          onClick={toggleSidebarSize} 
+          className="text-[hsl(var(--sidebarForeground))] p-1 rounded-md hover:bg-[hsl(var(--muted))] transition-colors flex items-center justify-center"
+          aria-label="Toggle sidebar"
+        >
+          <ChevronLeft className={`h-5 w-5 transition-transform ${state === "collapsed" ? "rotate-180" : ""}`} />
         </button>
-        <SidebarTrigger className="md:hidden text-[hsl(var(--sidebarForeground))]" />
       </div>
       <SidebarContent>
         <SidebarGroup>
@@ -51,7 +58,11 @@ export function Sidebar() {
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild tooltip={item.title}>
+                  <SidebarMenuButton 
+                    asChild 
+                    tooltip={item.title}
+                    isActive={location.pathname === item.path}
+                  >
                     <Link to={item.path} className="flex items-center gap-2 text-[hsl(var(--sidebarForeground))]">
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>

@@ -77,9 +77,17 @@
   a {
     @apply transition-colors duration-200;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+  }
+  
+  p, span, li, td, th {
+    @apply text-foreground;
+  }
 }
 
-/* Theme refresh animation */
+/* Theme refresh animation - strengthen it */
 .theme-refresh * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -96,6 +104,11 @@
   
   .accordion-content {
     @apply text-sm;
+  }
+  
+  /* Mobile navigation adjustments */
+  .mobile-nav-container {
+    @apply px-2;
   }
 }
 
@@ -120,4 +133,13 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--accent));
+}
+
+/* Content styling - ensure all text picks up theme colors */
+.content-container {
+  @apply bg-background text-foreground;
+}
+
+.content-card {
+  @apply bg-card text-card-foreground;
 }
