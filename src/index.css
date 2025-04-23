@@ -75,21 +75,35 @@
     @apply bg-background text-foreground transition-colors duration-300;
   }
   a {
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-200 text-[hsl(var(--primary))];
   }
   
+  /* Enforce theme text colors on all typography elements */
   h1, h2, h3, h4, h5, h6 {
-    @apply text-foreground;
+    @apply text-[hsl(var(--foreground))] font-bold;
   }
   
-  p, span, li, td, th {
-    @apply text-foreground;
+  p, span, li, td, th, div {
+    @apply text-[hsl(var(--foreground))];
+  }
+  
+  button {
+    @apply text-[hsl(var(--foreground))] hover:text-[hsl(var(--foreground))]/80;
+  }
+  
+  /* Special cases for accordion and other components */
+  .accordion-trigger {
+    @apply text-[hsl(var(--primary))];
+  }
+  
+  .accordion-content p {
+    @apply text-[hsl(var(--foreground))];
   }
 }
 
 /* Theme refresh animation - strengthen it */
 .theme-refresh * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
 }
 
 /* Responsive adjustments */
@@ -114,7 +128,7 @@
 
 /* Make back button look nice */
 .back-button {
-  @apply flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-4;
+  @apply flex items-center gap-2 text-[hsl(var(--primary))] hover:text-[hsl(var(--primary))]/80 transition-colors mb-4;
 }
 
 /* Custom scrollbar */
@@ -137,9 +151,9 @@
 
 /* Content styling - ensure all text picks up theme colors */
 .content-container {
-  @apply bg-background text-foreground;
+  @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
 }
 
 .content-card {
-  @apply bg-card text-card-foreground;
+  @apply bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))];
 }

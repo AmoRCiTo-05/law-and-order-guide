@@ -30,13 +30,28 @@ const AppContent = () => {
       detail: { theme: storedTheme } 
     });
     window.dispatchEvent(themeEvent);
+    
+    // Force reapplication of theme
+    const root = document.documentElement;
+    const body = document.body;
+    body.classList.add("theme-refresh");
+    
+    // Apply theme to all text elements
+    setTimeout(() => {
+      const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div, li, td, th');
+      textElements.forEach(el => {
+        if (!el.getAttribute('style')) {
+          (el as HTMLElement).style.color = '';  // Reset to use CSS variables
+        }
+      });
+    }, 100);
   }, []);
 
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultState={isMobile ? "collapsed" : "expanded"}>
       <div className="theme-refresh min-h-screen flex w-full">
         <Sidebar />
-        <main className="flex-1 overflow-x-hidden bg-background">
+        <main className="flex-1 overflow-x-hidden bg-[hsl(var(--background))]">
           <div className="p-4 flex justify-end items-center">
             <ThemeSwitcher />
           </div>

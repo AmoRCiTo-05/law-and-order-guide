@@ -41,7 +41,7 @@ export function Sidebar() {
       <div className="p-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Siren className="h-8 w-8 text-[hsl(var(--logo))]" />
-          <span className="text-lg font-bold text-[hsl(var(--logo))] hidden md:inline">PD RP Guide</span>
+          <span className={`text-lg font-bold text-[hsl(var(--logo))] ${state === "collapsed" ? "hidden" : "hidden md:inline"}`}>PD RP Guide</span>
         </div>
         <button 
           onClick={toggleSidebarSize} 
@@ -65,7 +65,7 @@ export function Sidebar() {
                   >
                     <Link to={item.path} className="flex items-center gap-2 text-[hsl(var(--sidebarForeground))]">
                       <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
+                      <span className={state === "collapsed" ? "hidden" : ""}>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -74,7 +74,7 @@ export function Sidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <div className="absolute bottom-4 left-4 text-[hsl(var(--sidebarForeground))] text-sm opacity-70">
+      <div className={`absolute bottom-4 left-4 text-[hsl(var(--sidebarForeground))] text-sm opacity-70 ${state === "collapsed" ? "hidden" : ""}`}>
         Made by Aansh (AmoRCiTo)
       </div>
     </SidebarComponent>

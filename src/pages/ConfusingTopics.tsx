@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const topics = [
@@ -151,18 +150,16 @@ Probable Cause
 
 const ConfusingTopics = () => {
   return (
-    <div className="container mx-auto p-6 min-h-screen">
-      <div className="flex items-center mb-8">
-        <a href="/" className="mr-4">
-          <button className="flex items-center text-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left mr-2">
-              <path d="m12 19-7-7 7-7"/>
-              <path d="M19 12H5"/>
-            </svg>
-            <span>Back to Home</span>
-          </button>
+    <div className="container mx-auto p-4 md:p-6 min-h-screen">
+      <div className="flex flex-col mb-6">
+        <a href="/" className="back-button mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          <span>Back to Home</span>
         </a>
-        <h1 className="text-4xl font-bold text-[#FFD700]">Confusing Topics</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-[hsl(var(--primary))]">Confusing Topics</h1>
       </div>
       
       <div className="mb-6">
@@ -176,15 +173,15 @@ const ConfusingTopics = () => {
           <AccordionItem 
             key={index} 
             value={`item-${index}`}
-            className="border border-[#FFD700]/20 rounded-lg bg-black/50 overflow-hidden"
+            className="border border-[hsl(var(--border))] rounded-lg bg-[hsl(var(--card))/50] overflow-hidden"
           >
-            <AccordionTrigger className="px-4 py-3 text-[#FFD700] hover:text-[#FFD700]/80 font-bold">
+            <AccordionTrigger className="px-4 py-3 text-[hsl(var(--primary))] hover:text-[hsl(var(--primary))]/80 font-bold">
               {topic.question}
             </AccordionTrigger>
-            <AccordionContent className="px-4 py-3 text-white">
+            <AccordionContent className="px-4 py-3 text-[hsl(var(--foreground))]">
               <div className="prose prose-invert max-w-none whitespace-pre-wrap">
                 {topic.answer.split('\n').map((line, idx) => (
-                  <p key={idx} className="mb-2 font-bold">{line}</p>
+                  <p key={idx} className="mb-2 text-[hsl(var(--foreground))]">{line}</p>
                 ))}
               </div>
             </AccordionContent>
