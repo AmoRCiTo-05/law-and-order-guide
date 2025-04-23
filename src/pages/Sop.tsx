@@ -1,15 +1,16 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const sopItems = [
   {
     title: "1. What is SOP?",
-    content: "Definition: Standard Operating Procedures (SOPs) are guidelines provided/set by police management or government to guide police officers in their work. These procedures include various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
+    content: "Definition: Standard Operating Procedure (SOP) is a guideline provided/set by police management or government to guide police officers in their work. This procedure includes various aspects such as:\n- Identifying reasonable suspicion\n- Establishing probable cause\n- Adhering to the chain of command\n- Managing escalation and de-escalation of force\n- Ensuring appropriate level of force\n- Addressing other operational considerations"
   },
   {
     title: "2. Code of Ethics vs Code of Conduct",
     content: `
     Code of Ethics:
-    - Integrity: Officers should always act with honesty and fairness.
+    - Integrity: Officer should always act with honesty and fairness.
     - Respect for Human Rights: Treat all individuals with dignity.
     - Impartiality: Make decisions without bias.
     - Accountability: Be responsible for actions and decisions.
@@ -25,7 +26,7 @@ const sopItems = [
   },
   {
     title: "3. Chain of Command",
-    content: "Officers are required to follow orders from their seniors without questioning, demonstrating professionalism. However, officers are only obligated to follow orders related to departmental duties and not personal tasks unrelated to the department. If a senior officer threatens or mistreats an officer, the officer can file a grievance report to the captain or higher authority to address the situation. Additionally, if an officer has an issue with a colleague or senior, they should first seek assistance from a senior officer. If this approach fails, they may escalate the matter to the Human Resources department for resolution."
+    content: "Officer is required to follow orders from their seniors without questioning, demonstrating professionalism. However, officer is only obligated to follow orders related to departmental duties and not personal tasks unrelated to the department. If a senior officer threatens or mistreats an officer, the officer can file a grievance report to the captain or higher authority to address the situation. Additionally, if an officer has an issue with a colleague or senior, they should first seek assistance from a senior officer. If this approach fails, they may escalate the matter to the Human Resources department for resolution."
   },
   {
     title: "4. Bonafide and Non-Bonafide Evidence",
@@ -84,14 +85,14 @@ const sopItems = [
   },
   {
     title: "10. Match of Force",
-    content: "Officers match the level of force/equipment to counter threats effectively. Examples include using similar weapons or vehicles to match criminal capabilities."
+    content: "Officer matches the level of force/equipment to counter threats effectively. Examples include using similar weapons or vehicles to match criminal capabilities."
   },
   {
     title: "11. 10-Codes",
-    content: "Short phrases or numbers used for quick radio communication to improve speed and clarity."
+    content: "Short phrase or number used for quick radio communication to improve speed and clarity."
   },
   {
-    title: "12. Warrants and Types",
+    title: "12. Types of Warrants",
     content: `
     - AOS (Arrest on Sight): Requires high command/DA permission
     - Search & Seizure: Judge approval needed, specific items only
@@ -104,9 +105,9 @@ const sopItems = [
     content: `
     Bail is a financial guarantee that allows a defendant to be released from custody while awaiting trial:
     
-    - Misdemeanors: Only a Magistrate can grant bail for minor offenses
-    - Felonies: Requires Judge approval and is rarely granted for serious crimes
-    - Financial Requirements: Typically set at 3x the amount of registered charges
+    - Misdemeanor: Only a Magistrate can grant bail for minor offenses
+    - Felony: Requires Judge approval and is rarely granted for serious crimes
+    - Financial Requirement: Typically set at 3x the amount of registered charges
     - Guarantor: Requires a third party to vouch for defendant's court appearance
     - Conditions: Often includes restrictions like regular check-ins, travel limitations, and ankle monitor
     - Revocation: Bail can be revoked if conditions are violated or new crimes committed
@@ -131,24 +132,24 @@ const sopItems = [
   {
     title: "15. Types of Crimes",
     content: `
-    - Felony: Serious crimes (murder, arson)
-    - Misdemeanor: Lesser offenses (trespassing)
-    - Infraction: Minor violations (traffic)
+    - Felony: Serious crime (murder, arson)
+    - Misdemeanor: Lesser offense (trespassing)
+    - Infraction: Minor violation (traffic)
     - HUT: Held Until Trial (terrorism)
     `
   },
   {
     title: "16. BOLO vs Warrants",
     content: `
-    BOLO:
+    BOLO (Be On the Lookout):
     - Alert to watch for person/vehicle
     - No arrest authority
-    - Information gathering
-
-    Warrant:
-    - Legal document for action
-    - Arrest/search authority
-    - Court issued
+    - Information gathering tool
+    - Purpose: To identify and locate persons of interest
+    - Issued By: Any officer can create and distribute
+    - Requirements: Description of subject, reason for BOLO, instructions on action to take
+    - Duration: Can remain active until canceled or subject is found
+    - Legal Impact: Does not provide legal authority to detain or arrest alone
     `
   },
   {
@@ -158,20 +159,20 @@ const sopItems = [
     - No continuous use
     - 1-3 minute cooldown
     - Warning required
-    - For fleeing suspects
+    - For fleeing suspect
     `
   },
   {
     title: "18. N+2 Rule",
-    content: "Server rule: officers = suspects + 2. Exceptions: government employee kidnapping, warrants, terrorist attacks, gang wars. Officers can use any weapons in these cases."
+    content: "Server rule: officer = suspect + 2. Exceptions: government employee kidnapping, warrants, terrorist attacks, gang wars. Officer can use any weapons in these cases."
   },
   {
     title: "19. Reasonable Suspicion",
-    content: "Solid reason to believe criminal activity might be occurring. Less than probable cause, allows for stop/frisk/detainment. Based on specific facts/observations."
+    content: "Reasonable suspicion is the legal standard that allows an officer to briefly detain a person for investigative purposes. It requires more than a hunch but less evidence than probable cause.\n\n- Based on specific facts and circumstances\n- Officer can articulate why they suspected criminal activity\n- Allows temporary detention, questioning, and pat-downs\n- Cannot justify arrest or full search without escalation to probable cause\n- Examples include: suspicious behavior in high-crime area, matching description of suspect, unusual nervousness or evasiveness, visible contraband, reliable informant tip\n\nUnlike probable cause, reasonable suspicion is a lower threshold that permits limited investigation but not arrest."
   },
   {
     title: "20. Probable Cause",
-    content: "Bonafide evidence of crime commission. Example: smelling marijuana and seeing drugs in plain view during traffic stop. Sufficient for arrest/search."
+    content: "Probable cause is the legal standard required for arrests, searches, and obtaining warrants. It exists when there is a reasonable basis for believing a crime may have been committed or evidence of a crime exists in a specific location.\n\n- Higher standard than reasonable suspicion\n- Based on factual evidence, not mere suspicion\n- Officer must have reasonable belief that a person committed a crime\n- Allows for arrest, search warrants, and seizure of evidence\n- Examples include: direct observation of criminal activity, positive results from field sobriety tests, physical evidence in plain view, multiple witness statements\n\nProbable cause represents a reasonable belief based on facts that would lead a reasonable person to believe a crime was committed, providing the legal basis for more intrusive police actions."
   },
   {
     title: "21. Reports/FIR vs Chargesheet",
@@ -186,13 +187,38 @@ const sopItems = [
     - Based on evidence
     - Leads to prosecution
     `
+  },
+  {
+    title: "22. Type of Settlement",
+    content: `
+    Types of legal settlements in criminal cases:
+    
+    - Plea Bargain: Agreement to plead guilty to lesser charges in exchange for reduced penalties
+    - Deferred Prosecution: Charges are suspended if defendant completes specific requirements
+    - Civil Compromise: Settlement of a criminal matter through financial or other compensation
+    - Diversion Programs: Alternative to prosecution involving rehabilitation, community service, or education
+    - Conditional Discharge: Case dismissal after completing court-ordered conditions
+    - No Contest Plea: Accepting punishment without admitting guilt
+    - Alford Plea: Maintaining innocence while acknowledging evidence is sufficient for conviction
+    `
   }
 ];
 
 const Sop = () => {
   return (
     <div className="container mx-auto p-6 min-h-screen">
-      <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Standard Operating Procedures (SOP)</h1>
+      <div className="flex items-center mb-8">
+        <a href="/" className="mr-4">
+          <button className="flex items-center text-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left mr-2">
+              <path d="m12 19-7-7 7-7"/>
+              <path d="M19 12H5"/>
+            </svg>
+            <span>Back to Home</span>
+          </button>
+        </a>
+        <h1 className="text-4xl font-bold text-[#FFD700]">Standard Operating Procedure (SOP)</h1>
+      </div>
       <Accordion type="single" collapsible className="w-full space-y-4">
         {sopItems.map((item, index) => (
           <AccordionItem 
