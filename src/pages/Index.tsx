@@ -4,8 +4,26 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-center">Law Enforcement Guide</h1>
+    <div className="container mx-auto p-6 bg-[#2E3440]">
+      <h1 className="text-4xl font-bold mb-8 text-center text-[#88C0D0]">Law Enforcement Guide</h1>
+      
+      <div className="mb-8 text-center">
+        <p className="text-[#ECEFF4] max-w-2xl mx-auto text-base leading-relaxed">
+          This document was created by AmoRCiTo to assist players interested in police department roleplay on GTA RP servers. Please note that these materials cover the basics and may vary depending on the specific server's rules and guidelines.
+        </p>
+        <p className="text-[#ECEFF4] mt-4">
+          If you have any suggestions or improvements, feel free to share them through the feedback form{" "}
+          <a 
+            href="https://forms.gle/W1mN5pZKLUeyK2uo6" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[#81A1C1] hover:underline"
+          >
+            Form
+          </a>.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Link to="/amendments" className="block">
           <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
@@ -78,3 +96,4 @@ const Index = () => {
 };
 
 export default Index;
+

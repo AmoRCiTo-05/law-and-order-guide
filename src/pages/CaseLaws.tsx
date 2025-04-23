@@ -46,16 +46,16 @@ const caseLaws = [
 
 const CaseLaws = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Case Laws</h1>
+    <div className="container mx-auto p-6 bg-[#2E3440]">
+      <h1 className="text-4xl font-bold mb-8 text-[#88C0D0]">Case Laws</h1>
       <div className="grid gap-6">
         {caseLaws.map((law) => (
-          <Card key={law.title} className="bg-black/50 border border-[#FFD700]/20">
+          <Card key={law.title} className="bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="text-[#FFD700]">{law.title}</CardTitle>
+              <CardTitle className="text-[#81A1C1]">{law.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-white font-bold">{law.description}</p>
+              <p className="text-[#ECEFF4] font-bold">{law.description}</p>
             </CardContent>
           </Card>
         ))}
@@ -65,3 +65,4 @@ const CaseLaws = () => {
 };
 
 export default CaseLaws;
+
