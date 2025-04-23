@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -57,16 +56,16 @@ const amendments = [
 
 const Amendments = () => {
   return (
-    <div className="container mx-auto p-6 bg-[#2E3440]">
-      <h1 className="text-4xl font-bold mb-8 text-[#88C0D0]">Constitutional Amendments</h1>
-      <div className="grid gap-6">
+    <div className="container mx-auto p-2 sm:p-6 bg-[#2E3440]">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8 text-[#88C0D0]">Constitutional Amendments</h1>
+      <div className="grid gap-4 sm:gap-6">
         {amendments.map((amendment) => (
           <Card key={amendment.number} className="bg-[#3B4252] border border-[#434C5E]">
-            <CardHeader>
-              <CardTitle className="text-[#81A1C1]">{amendment.number} Amendment - {amendment.title}</CardTitle>
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-[#81A1C1] text-lg sm:text-xl">{amendment.number} Amendment - {amendment.title}</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-[#ECEFF4] font-bold">{amendment.description}</p>
+            <CardContent className="p-4 pt-0 sm:p-6 sm:pt-0">
+              <p className="text-[#ECEFF4] font-bold text-sm sm:text-base">{amendment.description}</p>
             </CardContent>
           </Card>
         ))}
@@ -76,4 +75,3 @@ const Amendments = () => {
 };
 
 export default Amendments;
-
