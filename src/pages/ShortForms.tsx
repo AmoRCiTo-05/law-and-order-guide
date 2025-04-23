@@ -1,3 +1,4 @@
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const shortForms = [
@@ -32,21 +33,21 @@ const shortForms = [
 
 const ShortForms = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-[#FFD700]">Law Enforcement Short Forms</h1>
-      <div className="border border-[#FFD700]/20 rounded-lg overflow-hidden bg-black/50">
+    <div className="container mx-auto p-6 bg-[#2E3440]">
+      <h1 className="text-4xl font-bold mb-8 text-[#88C0D0]">Law Enforcement Short Forms</h1>
+      <div className="border border-[#434C5E] rounded-lg overflow-hidden bg-[#3B4252]">
         <Table>
           <TableHeader>
-            <TableRow className="border-b border-[#FFD700]/20">
-              <TableHead className="text-[#FFD700] font-bold">Abbreviation</TableHead>
-              <TableHead className="text-[#FFD700] font-bold">Meaning</TableHead>
+            <TableRow className="border-b border-[#434C5E]">
+              <TableHead className="text-[#81A1C1] font-bold">Abbreviation</TableHead>
+              <TableHead className="text-[#81A1C1] font-bold">Meaning</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {shortForms.map((form) => (
-              <TableRow key={form.abbreviation} className="hover:bg-black/50 border-b border-[#FFD700]/20">
-                <TableCell className="font-bold text-white">{form.abbreviation}</TableCell>
-                <TableCell className="text-white">{form.meaning}</TableCell>
+              <TableRow key={form.abbreviation} className="hover:bg-[#434C5E]/50 border-b border-[#434C5E]">
+                <TableCell className="font-bold text-[#ECEFF4]">{form.abbreviation}</TableCell>
+                <TableCell className="text-[#ECEFF4]">{form.meaning}</TableCell>
               </TableRow>
             ))}
           </TableBody>

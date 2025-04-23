@@ -206,10 +206,10 @@ const sopItems = [
 
 const Sop = () => {
   return (
-    <div className="container mx-auto p-6 min-h-screen">
+    <div className="container mx-auto p-6 min-h-screen bg-[#2E3440]">
       <div className="flex items-center mb-8">
         <a href="/" className="mr-4">
-          <button className="flex items-center text-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+          <button className="flex items-center text-[#88C0D0] hover:text-[#81A1C1] transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left mr-2">
               <path d="m12 19-7-7 7-7"/>
               <path d="M19 12H5"/>
@@ -217,19 +217,19 @@ const Sop = () => {
             <span>Back to Home</span>
           </button>
         </a>
-        <h1 className="text-4xl font-bold text-[#FFD700]">Standard Operating Procedure (SOP)</h1>
+        <h1 className="text-4xl font-bold text-[#88C0D0]">Standard Operating Procedure (SOP)</h1>
       </div>
       <Accordion type="single" collapsible className="w-full space-y-4">
         {sopItems.map((item, index) => (
           <AccordionItem 
             key={index} 
             value={`item-${index}`}
-            className="border border-[#FFD700]/20 rounded-lg bg-black/50 overflow-hidden"
+            className="border border-[#434C5E] rounded-lg bg-[#3B4252] overflow-hidden"
           >
-            <AccordionTrigger className="px-4 py-3 text-[#FFD700] hover:text-[#FFD700]/80 font-bold">
+            <AccordionTrigger className="px-4 py-3 text-[#81A1C1] hover:text-[#88C0D0] font-bold">
               {item.title}
             </AccordionTrigger>
-            <AccordionContent className="px-4 py-3 text-white">
+            <AccordionContent className="px-4 py-3 text-[#ECEFF4]">
               <div className="prose prose-invert max-w-none whitespace-pre-wrap">
                 {item.content.split('\n').map((line, idx) => (
                   <p key={idx} className="mb-2 font-bold">{line}</p>

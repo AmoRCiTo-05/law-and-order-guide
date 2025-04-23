@@ -72,7 +72,7 @@ const TenCodes = () => {
   );
 
   return (
-    <div className="container mx-auto p-6 min-h-screen">
+    <div className="container mx-auto p-6 min-h-screen bg-[#2E3440]">
       <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
         <a href="/" className="back-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left">
@@ -81,7 +81,7 @@ const TenCodes = () => {
           </svg>
           <span>Back to Home</span>
         </a>
-        <h1 className="text-4xl font-bold text-[#FFD700]">10 Codes Reference</h1>
+        <h1 className="text-4xl font-bold text-[#88C0D0]">10 Codes Reference</h1>
       </div>
       
       <div className="mb-6">
@@ -90,25 +90,25 @@ const TenCodes = () => {
           placeholder="Search codes or descriptions..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="max-w-md"
+          className="max-w-md bg-[#3B4252] text-[#ECEFF4] border-[#434C5E]"
         />
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredCodes.map((code) => (
-          <Card key={code.code} className="transition-all hover:shadow-lg">
-            <CardHeader className="bg-[hsl(var(--muted))] py-2 px-4 rounded-t-lg">
-              <CardTitle className="text-xl font-bold text-[hsl(var(--primary))]">{code.code}</CardTitle>
+          <Card key={code.code} className="transition-all hover:shadow-lg bg-[#3B4252] border border-[#434C5E]">
+            <CardHeader className="bg-[#4C566A] py-2 px-4 rounded-t-lg">
+              <CardTitle className="text-xl font-bold text-[#88C0D0]">{code.code}</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <p className="text-[hsl(var(--foreground))]">{code.description}</p>
+              <p className="text-[#ECEFF4]">{code.description}</p>
             </CardContent>
           </Card>
         ))}
       </div>
       
       {filteredCodes.length === 0 && (
-        <p className="text-center mt-8 text-[hsl(var(--muted-foreground))]">
+        <p className="text-center mt-8 text-[#81A1C1]">
           No codes found matching "{searchTerm}"
         </p>
       )}

@@ -26,67 +26,67 @@ const Index = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Link to="/amendments" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">Constitutional Amendments</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">Constitutional Amendments</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Essential amendments governing law enforcement practices and civil rights protection.</p>
+              <p className="text-[#ECEFF4] font-bold">Essential amendments governing law enforcement practices and civil rights protection.</p>
             </CardContent>
           </Card>
         </Link>
 
         <Link to="/short-forms" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">Short Forms</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">Short Forms</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Common abbreviations and codes used in law enforcement communications.</p>
+              <p className="text-[#ECEFF4] font-bold">Common abbreviations and codes used in law enforcement communications.</p>
             </CardContent>
           </Card>
         </Link>
 
         <Link to="/case-laws" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">Case Laws</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">Case Laws</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Landmark legal decisions and precedents shaping law enforcement procedures.</p>
+              <p className="text-[#ECEFF4] font-bold">Landmark legal decisions and precedents shaping law enforcement procedures.</p>
             </CardContent>
           </Card>
         </Link>
 
         <Link to="/sop" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">Standard Operating Procedures</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">Standard Operating Procedures</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Comprehensive guidelines and protocols for law enforcement operations.</p>
+              <p className="text-[#ECEFF4] font-bold">Comprehensive guidelines and protocols for law enforcement operations.</p>
             </CardContent>
           </Card>
         </Link>
         
         <Link to="/ten-codes" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">10 Codes</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">10 Codes</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Radio communication codes used by law enforcement for efficient messaging.</p>
+              <p className="text-[#ECEFF4] font-bold">Radio communication codes used by law enforcement for efficient messaging.</p>
             </CardContent>
           </Card>
         </Link>
 
         <Link to="/confusing-topics" className="block">
-          <Card className="transition-transform hover:scale-105 cursor-pointer h-full">
+          <Card className="transition-transform hover:scale-105 cursor-pointer h-full bg-[#3B4252] border border-[#434C5E]">
             <CardHeader>
-              <CardTitle className="font-bold">Confusing Topics</CardTitle>
+              <CardTitle className="font-bold text-[#81A1C1]">Confusing Topics</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[hsl(var(--foreground))] font-bold">Clear explanations for complicated legal scenarios and frequently asked questions.</p>
+              <p className="text-[#ECEFF4] font-bold">Clear explanations for complicated legal scenarios and frequently asked questions.</p>
             </CardContent>
           </Card>
         </Link>
@@ -96,4 +96,3 @@ const Index = () => {
 };
 
 export default Index;
-
