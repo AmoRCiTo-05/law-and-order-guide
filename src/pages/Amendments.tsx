@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import MobileMenuButton from "@/components/MobileMenuButton";
+import MobileBackButton from "@/components/MobileBackButton";
 
 const amendments = [
   {
@@ -56,7 +58,10 @@ const amendments = [
 
 const Amendments = () => {
   return (
-    <div className="container mx-auto p-2 sm:p-6 bg-[#2E3440]">
+    <div className="container mx-auto p-2 sm:p-6 bg-[#2E3440] min-h-screen relative">
+      <MobileMenuButton />
+      <MobileBackButton />
+      <div className="sm:mt-0 mt-16" />
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8 text-[#88C0D0]">Constitutional Amendments</h1>
       <div className="grid gap-4 sm:gap-6">
         {amendments.map((amendment) => (

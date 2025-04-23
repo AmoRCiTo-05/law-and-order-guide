@@ -1,7 +1,8 @@
-
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import MobileMenuButton from "@/components/MobileMenuButton";
+import MobileBackButton from "@/components/MobileBackButton";
 
 const tenCodes = [
   { code: "10-2", description: "Reception Good" },
@@ -72,18 +73,13 @@ const TenCodes = () => {
   );
 
   return (
-    <div className="container mx-auto p-6 min-h-screen bg-[#2E3440]">
+    <div className="container mx-auto p-6 min-h-screen bg-[#2E3440] relative">
+      <MobileMenuButton />
+      <MobileBackButton />
+      <div className="sm:mt-0 mt-16" />
       <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
-        <a href="/" className="back-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left">
-            <path d="m12 19-7-7 7-7"/>
-            <path d="M19 12H5"/>
-          </svg>
-          <span>Back to Home</span>
-        </a>
         <h1 className="text-4xl font-bold text-[#88C0D0]">10 Codes Reference</h1>
       </div>
-      
       <div className="mb-6">
         <Input
           type="search"
@@ -93,7 +89,6 @@ const TenCodes = () => {
           className="max-w-md bg-[#3B4252] text-[#ECEFF4] border-[#434C5E]"
         />
       </div>
-      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredCodes.map((code) => (
           <Card key={code.code} className="transition-all hover:shadow-lg bg-[#3B4252] border border-[#434C5E]">
@@ -106,7 +101,6 @@ const TenCodes = () => {
           </Card>
         ))}
       </div>
-      
       {filteredCodes.length === 0 && (
         <p className="text-center mt-8 text-[#81A1C1]">
           No codes found matching "{searchTerm}"
