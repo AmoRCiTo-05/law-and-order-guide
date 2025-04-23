@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,6 +105,15 @@
 /* Theme refresh animation - strengthen it */
 .theme-refresh * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Hide scrollbar utility class */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 /* Enhanced responsive adjustments */

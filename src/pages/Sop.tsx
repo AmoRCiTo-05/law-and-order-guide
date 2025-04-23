@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const sopItems = [
@@ -150,6 +149,16 @@ const sopItems = [
     - Requirements: Description of subject, reason for BOLO, instructions on action to take
     - Duration: Can remain active until canceled or subject is found
     - Legal Impact: Does not provide legal authority to detain or arrest alone
+    
+    Warrant:
+    - Legal document authorizing arrest or search
+    - Requires probable cause
+    - Must be signed by judge
+    - Purpose: To authorize arrest or search
+    - Issued By: Only judicial officers
+    - Requirements: Specific allegations of criminal activity
+    - Duration: Until executed or expired
+    - Legal Impact: Provides full legal authority for specified action
     `
   },
   {

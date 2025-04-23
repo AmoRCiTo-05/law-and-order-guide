@@ -51,12 +51,12 @@ const Index = () => {
           This document was created by AmoRCiTo to assist players interested in police department roleplay on GTA RP servers. Please note that these materials cover the basics and may vary depending on the specific server's rules and guidelines.
         </p>
         <p className="text-[#ECEFF4] text-sm sm:text-base">
-          If you have any suggestions or improvements, feel free to share them through the feedback form{" "}
+          If you have any suggestions or improvements, feel free to share them through the feedback{" "}
           <a 
             href="https://forms.gle/W1mN5pZKLUeyK2uo6" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="font-bold text-[#81A1C1] hover:underline"
+            className="font-extrabold text-[#81A1C1] hover:underline"
           >
             Form
           </a>.
