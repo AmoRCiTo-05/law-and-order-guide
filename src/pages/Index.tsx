@@ -1,7 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link, useLocation } from "react-router-dom";
-import MobileMenuButton from "@/components/MobileMenuButton";
-import MobileBackButton from "@/components/MobileBackButton";
+import MobileNavBar from "@/components/MobileNavBar";
 
 const menuItems = [
   {
@@ -41,22 +41,10 @@ const menuItems = [
   },
 ];
 
-const orderedMenu = [
-  menuItems[1], // 10 Codes
-  menuItems[2], // Short Forms
-  menuItems[3], // SOP
-  menuItems[4], // Amendments
-  menuItems[5], // Case Laws
-  menuItems[6], // Confusing Topics
-];
-
 const Index = () => {
   const location = useLocation();
   return (
-    <div className="container mx-auto px-2 sm:px-6 py-4 bg-[#2E3440] min-h-screen flex flex-col relative">
-      <MobileMenuButton />
-      <MobileBackButton />
-      <div className="sm:mt-0 mt-16" />
+    <div className="container mx-auto px-2 sm:px-6 py-4 bg-[#2E3440] min-h-screen flex flex-col">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-center text-[#88C0D0] drop-shadow">Law Enforcement Guide</h1>
       <div className="mb-4 sm:mb-6 text-center px-2 sm:px-0">
         <p className="text-[#ECEFF4] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-2">
@@ -69,7 +57,6 @@ const Index = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="font-extrabold text-[#81A1C1] hover:underline"
-            style={{ fontWeight: "bold" }}
           >
             Form
           </a>.
@@ -77,7 +64,8 @@ const Index = () => {
       </div>
       <div className="flex-1 flex items-center justify-center">
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {orderedMenu.map((item) => (
+          {menuItems.map((item) =>
+            item.path !== "/" ? (
               <Link
                 to={item.path}
                 className="block"
@@ -93,9 +81,13 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </Link>
-            )
+            ) : null
           )}
         </div>
+      </div>
+      {/* Mobile nav shown only on mobile */}
+      <div className="sm:hidden">
+        <MobileNavBar />
       </div>
     </div>
   );

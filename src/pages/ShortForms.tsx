@@ -1,7 +1,5 @@
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import MobileMenuButton from "@/components/MobileMenuButton";
-import MobileBackButton from "@/components/MobileBackButton";
 
 const shortForms = [
   { abbreviation: "AOS", meaning: "Arrest On Sight" },
@@ -35,11 +33,7 @@ const shortForms = [
 
 const ShortForms = () => {
   return (
-    <div className="container mx-auto p-2 sm:p-6 bg-[#2E3440] min-h-screen relative">
-      {/* Menu and back buttons for mobile */}
-      <MobileMenuButton />
-      <MobileBackButton />
-      <div className="sm:mt-0 mt-16" />
+    <div className="container mx-auto p-2 sm:p-6 bg-[#2E3440]">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8 text-[#88C0D0]">Law Enforcement Short Forms</h1>
       <div className="border border-[#434C5E] rounded-lg overflow-hidden bg-[#3B4252] overflow-x-auto">
         <Table>
